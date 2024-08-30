@@ -21,13 +21,13 @@ export interface Config {
 }
 
 export const configData: Config = {
-	siteTitle: 'NTCcom. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'NTCcom Tailwind CSS Astro Starter Kit by Oxygenna',
 	siteDescription:
 		'NTCcom is a design and development agency that specializes in creating beautiful and functional websites.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.png',
-		alt: 'NTCcom. logo'
+		alt: 'NTCcom logo'
 	},
 	canonical: true,
 	noindex: false,

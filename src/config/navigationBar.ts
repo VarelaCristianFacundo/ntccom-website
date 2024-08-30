@@ -35,7 +35,7 @@ export const navigationBarData: NavData = {
 	logo: {
 		src: '/logo.png',
 		alt: 'The tailwind astro theme',
-		text: 'NTCcom.'
+		text: 'NTCcom'
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
