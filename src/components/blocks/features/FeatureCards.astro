@@ -1,0 +1,71 @@
+---
+// Feature Cards grid Section
+// ------------
+// Description: A grid of cards with feature information in a 4 column layout.
+
+// Components
+// - Layout
+import Section from '../../ui/Section.astro'
+import Row from '../../ui/Row.astro'
+import Col from '../../ui/Col.astro'
+// - UI
+import Card from '../../ui/cards/FeatureCard.astro'
+
+// Content
+// - Cards
+import feature01 from '../../../assets/cards/feature-01.png'
+import feature02 from '../../../assets/cards/feature-02.png'
+import feature03 from '../../../assets/cards/feature-03.png'
+import feature04 from '../../../assets/cards/feature-04.png'
+import feature05 from '../../../assets/cards/feature-05.png'
+---
+
+<Section id="features">
+	<Row>
+		<Col span="12" align="center" classes="mb-12 max-w-4xl mx-auto">
+			<h2 class="text-pretty">Let's transform your business <strong>together</strong></h2>
+			<p class="text-md pb-0">
+				High quality, competitively priced, flexible communication solutions that can be delivered
+				in a matter of days.
+			</p>
+		</Col>
+	</Row>
+	<Row>
+		<Col span="4">
+			<Card
+				title="Advanced Communication Solutions for Seamless Business Integration"
+				subtitle="Transform your customer interactions with our cutting-edge CPaaS platform. Effortlessly integrate voice, SMS, video, and other communication channels directly into your applications. Our cloud-based solution eliminates the need for complex backend infrastructure, allowing your business to focus on delivering personalized and real-time customer experiences across multiple platforms. Stay ahead in the digital age with flexible and scalable communication tools tailored to your business needs."
+				image={feature01}
+				link="/features"
+			/>
+		</Col>
+		<Col span="4" classes="flex flex-col gap-6">
+			<Card
+				title="International Voice Termination Wholesale Services"
+				subtitle="NTC has an advanced network providing call termination services over direct routes, with high quality and competitive prices."
+				image={feature02}
+				link="/features"
+			/>
+			<Card
+				title="Voice and Data Solutions over Secure and Encrypted Networks."
+				subtitle="NTC ensures highly secure communications between satellite terminals with robust end-to-end encryption."
+				image={feature03}
+				link="/features"
+			/>
+		</Col>
+		<Col span="4" classes="flex flex-col gap-6">
+			<Card
+				title="Telecommunication Service for Businesses & Encrypted Mobile"
+				subtitle="NTC offers corporate call termination services, providing an advantageous price-quality relationship. Speak with confidence from your mobile phone."
+				image={feature04}
+				link="/features"
+			/>
+			<Card
+				title="Software Development Solutions"
+				subtitle="Unlock the potential of your business with our comprehensive software development solutions for web and mobile platforms."
+				image={feature05}
+				link="/features"
+			/>
+		</Col>
+	</Row>
+</Section>
