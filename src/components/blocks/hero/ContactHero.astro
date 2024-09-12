@@ -23,11 +23,46 @@ const { id, title, text, classes } = Astro.props
 
 <Section id={id} classes={classes}>
 	<Row>
-		<Col span="6" classes={`self-center`}>
+		<Col span="6">
 			<header class="max-w-xl">
 				<h1 set:html={title} />
 				<p class="text-lg leading-relaxed">{text}</p>
 			</header>
+
+			<!-- Información de contacto -->
+			<div class="mt-6 space-y-2">
+				<p class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">Contact Details</p>
+
+				<p class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
+					Adress: <a href="mailto:info@ntccom.net" class="text-primary-500 hover:underline"
+						>13611 S Dixie HWY 346, Miami FL US 33176</a
+					>
+				</p>
+				<p class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
+					Tel.: <a href="tel:+13059611767" class="text-primary-500 hover:underline"
+						>(305) 961 1767</a
+					>
+				</p>
+				<p class="text-lg font-semibold text-neutral-800 dark:text-neutral-200">
+					Email: <a href="mailto:info@ntccom.net" class="text-primary-500 hover:underline"
+						>info@ntccom.net</a
+					>
+				</p>
+			</div>
+
+			<!-- Insertamos el mapa de Google Maps aquí -->
+			<div class="mt-8 max-w-xl">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3588.0454891304645!2d-80.32684382463692!3d25.648915329185756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9c8648b76032d%3A0x3e5ed9e5e030fb0d!2s13611%20S%20Dixie%20Hwy%20%23346%2C%20Miami%2C%20FL%2033176%2C%20EE.%20UU.!5e0!3m2!1ses-419!2sar!4v1694515016580!5m2!1ses-419!2sar"
+					width="100%"
+					height="100%"
+					style="border:0;"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				>
+				</iframe>
+			</div>
 		</Col>
 		<Col span="6" classes="relative">
 			<Form classes="max-w-xl" />

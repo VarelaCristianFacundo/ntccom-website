@@ -28,11 +28,12 @@ function isActivePath(currentPath: string): boolean {
 }
 
 // Type assertion for navActions to ensure type safety
-const savedNavActions = navActions.map((action) => ({
-	...action,
-	size: action.size as 'base' | 'lg' | 'sm',
-	style: action.style as 'primary' | 'secondary' | 'neutral'
-}))
+const savedNavActions =
+	navActions?.map((action) => ({
+		...action,
+		size: action.size as 'base' | 'lg' | 'sm',
+		style: action.style as 'primary' | 'secondary' | 'neutral'
+	})) || []
 ---
 
 <header class="header">

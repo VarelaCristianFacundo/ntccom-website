@@ -6,8 +6,8 @@
 // - Title: the title of the card
 // - Subtitle: the subtitle of the card
 // - Image: the main image of the card
+// - Video: the main video of the card (MP4 format) <-- Agregamos esto
 // - Link: The link to the blog post
-// Reference: https://wind-ui.com/components/cards/
 
 // Components
 // - UI
@@ -18,9 +18,10 @@ type Props = {
 	title?: string
 	subtitle?: string
 	image?: any
+	video?: string // Nueva propiedad para video
 	link?: string
 }
-const { title , subtitle, image, link } = Astro.props
+const { title, subtitle, image, video, link } = Astro.props
 ---
 
 <Card
@@ -29,6 +30,7 @@ const { title , subtitle, image, link } = Astro.props
 	titleSize="xl"
 	link={link}
 	image={image}
+	video={video}
 	type="image-bottom"
 	classes="!bg-neutral-50 !shadow-none dark:!bg-neutral-900 h-full justify-between border border-neutral-100 dark:border-neutral-800"
 />

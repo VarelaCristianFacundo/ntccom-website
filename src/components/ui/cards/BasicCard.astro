@@ -1,17 +1,17 @@
 ---
 // Basic Card
 // ------------
-// Description: The basic card component
+// Description: The basic card component, now with video support and autoplay functionality.
 // Properties:
 // - Title: the title of the card
 // - Subtitle: the subtitle of the card
 // - TitleSize: the size of the title
 // - Image: the main image of the card
+// - Video: the main video of the card (MP4 format)
 // - Icon: the icon of the card
 // - Link: If provided, the card will be a link
-// - Type: Image-top or Image-bottom (refers to the image position)
+// - Type: Image-top or Image-bottom (refers to the media position)
 // - classes: extra classes
-// Reference: https://wind-ui.com/components/cards/
 
 // Components
 // - UI
@@ -26,24 +26,46 @@ type Props = {
 	subtitle?: string
 	titleSize?: 'sm' | 'base' | 'lg' | 'xl'
 	image?: any
+	video?: string // Nueva propiedad para video MP4
 	icon?: string
 	link?: string
 	type?: 'image-top' | 'image-bottom'
 	classes?: string
 }
-const { title = '', subtitle, titleSize = 'lg', image, icon, link, type, classes } = Astro.props
+const {
+	title = '',
+	subtitle,
+	titleSize = 'lg',
+	image,
+	video,
+	icon,
+	link,
+	type,
+	classes
+} = Astro.props
 ---
 
 <Card classes={classes} link={link}>
 	{
-		image && (
-			<Image
-				src={image}
-				alt={title}
-				class={type === 'image-bottom' ? 'order-2' : ''}
-				width={600}
-				height={400}
+		video ? (
+			<video
+				src={video}
+				autoplay
+				muted
+				loop
+				playsinline
+				class={type === 'image-bottom' ? 'order-2 h-auto w-full' : 'h-auto w-full'}
 			/>
+		) : (
+			image && (
+				<Image
+					src={image}
+					alt={title}
+					class={type === 'image-bottom' ? 'order-2' : ''}
+					width={600}
+					height={400}
+				/>
+			)
 		)
 	}
 	{
@@ -63,8 +85,12 @@ const { title = '', subtitle, titleSize = 'lg', image, icon, link, type, classes
 		<slot />
 	</CardBody>
 </Card>
+
 <style>
 	.card__icon {
 		@apply inline-block size-6 shrink-0 text-primary-500;
+	}
+	video {
+		@apply w-full rounded-lg;
 	}
 </style>
