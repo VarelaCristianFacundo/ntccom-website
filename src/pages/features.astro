@@ -10,11 +10,12 @@ import CTA from '../components/blocks/CTA/BasicDark.astro'
 // Data
 import featuresData from '../data/json-files/featuresData.json'
 // - Feature Categories
-const featuresAnalytics = featuresData.filter((feature) => feature.category === 'Analytics')
-const featuresProductivity = featuresData.filter((feature) => feature.category === 'Productivity')
+const featuresCommunication = featuresData.filter((feature) => feature.category === 'Communication')
+const featuresTelecommunication = featuresData.filter((feature) => feature.category === 'Telecommunication')
 const featuresSecurity = featuresData.filter((feature) => feature.category === 'Security')
-const featuresIntegrations = featuresData.filter((feature) => feature.category === 'Integrations')
-const featuresSupport = featuresData.filter((feature) => feature.category === 'Support')
+const featuresMobile = featuresData.filter((feature) => feature.category === 'Mobile Communication')
+const featuresSoftwareDevelopment = featuresData.filter((feature) => feature.category === 'Software Development')
+
 
 // Content
 // - SEO
@@ -33,31 +34,32 @@ const header = {
 <Layout title={SEO.title} description={SEO.description}>
 	<Hero title={header.title} text={header.text} />
 	<Feature
-		title="Insightful Analytics"
-		text="Delve into your data with precision and uncover actionable insights."
-		data={featuresAnalytics}
+	title="Software Development Solutions"
+	text="Unlock your business potential with our tailored software development services for web and mobile platforms, designed to meet the specific needs of your industry."
+	data={featuresSoftwareDevelopment}
+/>
+	<Feature
+		title="Advanced Communication Solutions for Seamless Business Integration"
+		text="Integrate communication channels like voice, SMS, and video into your apps effortlessly with our CPaaS platform. Provide real-time, personalized experiences for your customers without worrying about complex backend infrastructure."
+		data={featuresCommunication}
 	/>
 	<Feature
-		title="Efficiency Unleashed"
-		text="Streamline tasks and focus on what matters with tools designed to boost your productivity."
+		title="International Voice Termination Wholesale Services"
+		text="NTC’s advanced network offers high-quality, cost-effective international call termination services over direct routes, ensuring clear communication for businesses worldwide."
+		data={featuresTelecommunication}
+		classes="bg-neutral-50 dark:bg-neutral-900"
+	/>
+	<Feature
+		title="Voice and Data Solutions over Secure and Encrypted Networks"
+		text="NTC guarantees encrypted, secure voice and data communication between satellite terminals, ensuring the confidentiality and integrity of all transmissions."
 		data={featuresSecurity}
+	/>
+	<Feature
+		title="Telecommunication Service for Businesses & Encrypted Mobile"
+		text="NTC provides encrypted mobile services and corporate call termination, allowing businesses to communicate with confidence and benefit from secure, affordable solutions."
+		data={featuresMobile}
 		classes="bg-neutral-50 dark:bg-neutral-900"
 	/>
-	<Feature
-		title="Ultimate Data Protection"
-		text="Keep your data safe with top-notch security measures and real-time threat detection."
-		data={featuresProductivity}
-	/>
-	<Feature
-		title="Seamless Connectivity"
-		text="Effortlessly connect your favorite apps and automate workflows for a smoother workday."
-		data={featuresIntegrations}
-		classes="bg-neutral-50 dark:bg-neutral-900"
-	/>
-	<Feature
-		title="24/7 Expert Help"
-		text="Our friendly support team is always here to assist you with any questions or issues."
-		data={featuresSupport}
-	/>
+
 	<CTA />
 </Layout>
