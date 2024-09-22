@@ -52,18 +52,18 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'Features',
 					subCategoryLink: '/features'
 				},
-				{
-					subCategory: 'FAQ',
-					subCategoryLink: '/faq'
-				},
-				{
-					subCategory: 'Pricing',
-					subCategoryLink: '/pricing'
-				},
-				{
-					subCategory: 'Changelog',
-					subCategoryLink: '/changelog'
-				},
+				// {
+				// 	subCategory: 'FAQ',
+				// 	subCategoryLink: '/faq'
+				// },
+				// {
+				// 	subCategory: 'Pricing',
+				// 	subCategoryLink: '/pricing'
+				// },
+				// {
+				// 	subCategory: 'Changelog',
+				// 	subCategoryLink: '/changelog'
+				// },
 				{
 					subCategory: 'Terms',
 					subCategoryLink: '/terms'
@@ -77,14 +77,14 @@ export const footerNavigationData: FooterData = {
 					subCategory: 'About us',
 					subCategoryLink: '/'
 				},
-				{
-					subCategory: 'News',
-					subCategoryLink: '/blog'
-				},
-				{
-					subCategory: 'Careers',
-					subCategoryLink: '/blog'
-				}
+				// {
+				// 	subCategory: 'News',
+				// 	subCategoryLink: '/blog'
+				// },
+				// {
+				// 	subCategory: 'Careers',
+				// 	subCategoryLink: '/blog'
+				// }
 			]
 		},
 		{
