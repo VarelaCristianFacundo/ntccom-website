@@ -22,6 +22,7 @@ import { Icon } from 'astro-icon/components'
 // Props
 type Props = {
 	id: string
+	name? : string
 	label: string
 	iconName?: string
 	iconPosition?: 'lead' | 'trail'
@@ -31,7 +32,7 @@ type Props = {
 	value?: string
 	classes?: string
 }
-const { id, label, iconName, iconPosition, helperText, required, disabled, value, classes } =
+const { id, name, label, iconName, iconPosition, helperText, required, disabled, value, classes } =
 	Astro.props
 ---
 
@@ -46,6 +47,7 @@ const { id, label, iconName, iconPosition, helperText, required, disabled, value
 	<textarea
 		id={id}
 		rows="7"
+		name={name}
 		name={id}
 		placeholder={label}
 		required={required}

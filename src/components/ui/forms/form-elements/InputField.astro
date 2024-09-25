@@ -24,6 +24,7 @@ import { Icon } from 'astro-icon/components'
 type Props = {
 	id: string
 	type?: 'text' | 'email' | 'password' | 'tel'
+	name? : string,
 	label: string
 	iconName?: string
 	iconPosition?: 'lead' | 'trail'
@@ -35,6 +36,7 @@ type Props = {
 }
 const {
 	type = 'text',
+	name,
 	id,
 	label,
 	iconName,
@@ -58,6 +60,7 @@ const {
 	<input
 		id={id}
 		type={type}
+		name={name}
 		name={id}
 		placeholder={label}
 		required={required}

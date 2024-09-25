@@ -37,7 +37,7 @@ export const footerNavigationData: FooterData = {
 	footerAbout: {
 		title: 'NTCcom',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'Copyright @ 2024',
 		logo: {
 			src: '/logo.png',
 			alt: 'The tailwind astro theme',

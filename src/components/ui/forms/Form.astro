@@ -9,11 +9,12 @@
 // Props
 type Props = {
 	method?: 'post' | 'get' | 'dialog'
+	id? : string
 	classes?: string
 }
-const { method = 'post', classes } = Astro.props
+const { method = 'post', id, classes } = Astro.props
 ---
 
-<form method={method} novalidate class:list={[{ [`${classes}`]: classes }]}>
+<form id={id} method={method} novalidate class:list={[{ [`${classes}`]: classes }]}>
 	<slot />
 </form>
